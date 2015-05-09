@@ -1,0 +1,14 @@
+{
+  "generator-angular-famous-ionic": {
+    "filenameCase": "snake",
+    "filenameSuffix": false,
+    "appname": "diveandco",
+    "clientFolder": "client",
+    "ionic": false,
+    "famous": true,
+    "ngCordova": false,
+    "fontawesome": true,
+    "bootstrap": false,
+    "material": true
+  }
+}
