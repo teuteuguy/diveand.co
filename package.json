@@ -1,6 +1,6 @@
 {
   "name": "diveandco",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "test": "gulp test",
     "postinstall": "bower install && node ./bin/protractor-fix-version.js"
