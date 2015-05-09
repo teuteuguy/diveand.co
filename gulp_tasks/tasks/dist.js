@@ -56,6 +56,10 @@ var taskHtml = function(constants) {
         .pipe(rename('robots.txt'))
         .pipe(gulp.dest(dest));
 
+    gulp.src('./' + constants.clientFolder + '/CNAME')
+        .pipe(rename('CNAME'))
+        .pipe(gulp.dest(dest));
+
     gulp.src('./' + constants.clientFolder + '/apple-touch-icon' + constants.targetSuffix + '.png')
         .pipe(rename('apple-touch-icon.png'))
         .pipe(gulp.dest(dest));
