@@ -357,6 +357,14 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      cname: {
+        // files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: '*CNAME*'
+        // }]
       }
     },
 
@@ -422,6 +430,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'ngAnnotate',
+    'copy:cname',
     'copy:dist',
     'cdnify',
     'cssmin',
