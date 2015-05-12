@@ -19,6 +19,7 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/map.css">
   <!-- endbuild -->
 </head>
 
@@ -50,7 +51,7 @@
               <md-icon md-svg-icon="menu"></md-icon>
             </md-button>
             <h2>
-              <span>Title</span>
+              <span>{{MC.pageTitle.title}}</span>
             </h2>
           </div>
         </md-toolbar>
@@ -89,6 +90,7 @@
   <script src="scripts/controllers/map/map.js"></script>
   <script src="scripts/controllers/map/mapBottomActions.js"></script>
   <script src="scripts/services/map/mapStyleApple.js"></script>
+  <script src="scripts/services/pagetitle.js"></script>
   <!-- endbuild -->
 </body>
 

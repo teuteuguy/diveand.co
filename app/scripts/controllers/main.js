@@ -10,8 +10,8 @@
 
 angular.module('diveandcoApp')
 
-.controller('MainCtrl', ['$log', '$mdSidenav',
-  function($log, $mdSidenav) {
+.controller('MainCtrl', ['$log', '$mdSidenav', 'pageTitle',
+  function($log, $mdSidenav, pageTitle) {
 
     var self = this;
 
@@ -34,6 +34,7 @@ angular.module('diveandcoApp')
     // self.selectUser   = selectUser;
     self.toggleList = toggleUsersList;
     // self.share = share;
+    self.pageTitle = pageTitle;
 
   }
 ]);

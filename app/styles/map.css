@@ -1,0 +1,27 @@
+#search-box-placeholder {
+	position:absolute;
+	width: 100%;
+	padding: 15px;
+	top: 0px;
+	left: 0px;
+	box-sizing: border-box;
+}
+
+#search-box {
+  position: relative;
+  background-color: #fff;
+
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  /*margin-top: 15px;*/
+  /*margin: auto;*/
+  /*margin-right: 10px;*/
+  /*margin-left: 12px;*/
+  padding: 5px 11px 5px 13px;
+  
+  text-overflow: ellipsis;
+  
+  width: 100%;
+  box-sizing: border-box;
+}

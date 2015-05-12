@@ -35,8 +35,8 @@ app.config(['uiGmapGoogleMapApiProvider',
   function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
       key: 'AIzaSyBTflAWAg7irIzzACpc1gdn2rfLzIJ2s8E',
-      v: '3.17',
-      libraries: 'weather,geometry,visualization'
+      v: '3.19',
+      libraries: 'weather,geometry,visualization,places'
     });
   }
 ]);
