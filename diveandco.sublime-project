@@ -1,0 +1,27 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+		    "name": "diveand.co",
+		    "folder_exclude_patterns": [
+		      "node_modules",
+		      "bower_components"
+		    ],
+		    "file_exclude_patterns": [
+		      "diveandco.sublime-project",
+		      ".bowerrc",
+		      ".editorconfig",
+		      ".gitattributes",
+		      ".eslintignore",
+		      ".eslintrc",
+		      ".gitignore",
+		      ".jscsrc",
+		      ".jshintrc",
+		      ".tern-project",
+		      ".yo-rc.json"
+		    ]
+		}
+	],
+	"tab_size": 2
+}
