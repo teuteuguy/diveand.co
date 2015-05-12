@@ -110,7 +110,7 @@ angular.module('diveandcoApp')
       reSetHeight();
       $window.addEventListener('resize', reSetHeight);
 
-      $scope.$on('$destroy', function() {
+      scope.$on('$destroy', function() {
         $window.removeEventListener('resize', reSetHeight);
       });
 
