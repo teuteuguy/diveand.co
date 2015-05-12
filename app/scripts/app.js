@@ -18,8 +18,8 @@ var app = angular.module('diveandcoApp', [
 app.config(['$mdThemingProvider', '$mdIconProvider',
   function($mdThemingProvider, $mdIconProvider) {
     $mdIconProvider
+      .defaultIconSet('./images/icons/avatars.svg', 128)
       .icon('menu', 'images/icons/menu.svg', 24);
-    // .defaultIconSet("./assets/svg/avatars.svg", 128)
     //   .icon("share", "./assets/svg/share.svg", 24)
     //   .icon("google_plus", "./assets/svg/google_plus.svg", 512)
     //   .icon("hangouts", "./assets/svg/hangouts.svg", 512)
@@ -52,8 +52,15 @@ app.config(['$stateProvider', '$urlRouterProvider',
       url: '/map',
       templateUrl: 'views/map/map.html',
       controller: 'MapCtrl as MapCtrl'
+    })
+    .state('about', {
+      url: '/about',
+      template: '<div layout-padding>Welcome to Dive and Co.<br/>Your friendly diving social network.</div>',
+      controller: ['pageTitle', function(pageTitle) {
+        pageTitle.title = 'About';
+      }]
     });
-    //   .state('state1.list', {
+    // .state('state1.list', {
     //     url: "/list",
     //     templateUrl: "partials/state1.list.html",
     //     controller: function($scope) {

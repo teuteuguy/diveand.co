@@ -35,11 +35,12 @@
         <h1 class="md-toolbar-tools">Dive and Co.</h1>
       </md-toolbar>
       <md-list>
-        <md-item>
-          <md-button class="menu-button">
-            Map
-          </md-button>
-        </md-item>
+        <md-item ng-repeat="mIt in MC.menuItems">
+          <md-button class="menu-button" ng-click="MC.selectMenuItem(mIt)" ng-class="{'selected' : mIt === MC.selected }">
+            <md-icon md-svg-icon="{{mIt.avatar}}" class="avatar"></md-icon>
+              {{mIt.name}}
+            </md-button>
+          </md-item>
       </md-list>
     </md-sidenav>
     <md-content flex id="content">
@@ -91,6 +92,7 @@
   <script src="scripts/controllers/map/mapBottomActions.js"></script>
   <script src="scripts/services/map/mapStyleApple.js"></script>
   <script src="scripts/services/pagetitle.js"></script>
+  <script src="scripts/services/menuservice.js"></script>
   <!-- endbuild -->
 </body>
 

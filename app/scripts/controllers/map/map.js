@@ -150,18 +150,18 @@ angular.module('diveandcoApp')
     self.bottomActions = bottomActions;
 
   }
-
 ])
 
-.directive('angularGoogleMapContainer', ['$window', '$timeout', function($window, $timeout) {
+.directive('angularGoogleMapContainer', ['$window', '$timeout', '$log', function($window, $timeout, $log) {
   return {
     restrict: 'C',
     link: function link(scope, element, attrs) {
 
+      // $log.debug('angularGoogleMapContainer: load');
+
       function reSetHeight() {
-        $timeout(function() {
-          element.css('height', ($window.innerHeight - 64) + 'px');
-        });
+        // $log.debug('angularGoogleMapContainer: resizing to ', ($window.innerHeight - 64));
+        element.css('height', ($window.innerHeight - 64) + 'px');
       }
 
       reSetHeight();

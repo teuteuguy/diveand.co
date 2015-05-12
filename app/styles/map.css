@@ -1,3 +1,7 @@
+.angular-google-map-container {
+  height: 200px;
+}
+
 #search-box-placeholder {
 	position:absolute;
 	width: 100%;

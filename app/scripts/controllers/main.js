@@ -10,13 +10,13 @@
 
 angular.module('diveandcoApp')
 
-.controller('MainCtrl', ['$log', '$mdSidenav', 'pageTitle',
-  function($log, $mdSidenav, pageTitle) {
+.controller('MainCtrl', ['$log', '$mdSidenav', '$state', 'pageTitle', 'menuService', 
+  function($log, $mdSidenav, $state, pageTitle, menuService) {
 
     var self = this;
 
-	var tag = 'MainCtrl:';
-	$log.debug(tag, 'load');
+  	var tag = 'MainCtrl:';
+  	$log.debug(tag, 'load');
 
     // *********************************
     // Internal methods
@@ -29,12 +29,33 @@ angular.module('diveandcoApp')
       $mdSidenav('left').toggle();
     }
 
-    // self.selected     = null;
-    // self.users        = [ ];
-    // self.selectUser   = selectUser;
+    /**
+     * Select the current avatars
+     * @param menuId
+     */
+    function selectMenuItem ( menuItem ) {
+      self.selected = angular.isNumber(menuItem) ? self.menuItems[menuItem] : menuItem;
+      self.toggleList();
+      $state.go(menuItem.go);
+    }
+
+    // *********************************
+    // Setup the Controller
+    // *********************************
+
+    self.selected     = null;
+    self.menuItems    = [ ];
+    self.selectMenuItem   = selectMenuItem;
     self.toggleList = toggleUsersList;
     // self.share = share;
     self.pageTitle = pageTitle;
+
+
+    // Load the menu
+    menuService.loadMenuItems().then( function( menuItems ) {
+      self.menuItems = [].concat(menuItems);
+      self.selected = menuItems[0];
+    });
 
   }
 ]);
