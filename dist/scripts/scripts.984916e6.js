@@ -1,1 +1,0 @@
-"use strict";angular.module("diveandcoApp",[]),angular.module("diveandcoApp").controller("MainCtrl",["$scope",function(a){a.awesomeThings=["HTML5 Boilerplate","AngularJS","Karma"]}]);
