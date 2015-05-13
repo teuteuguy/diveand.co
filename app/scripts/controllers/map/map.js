@@ -76,8 +76,8 @@ angular.module('diveandcoApp')
     }
 
     self.searchbox = {
-      template: 'searchbox.tpl.html',
-      // template: 'views/map/mapSearchBox.html',
+      // template: 'searchbox.tpl.html',
+      template: 'views/map/mapSearchBox.html',
       events: {
         place_changed: function(autocomplete) {
 
@@ -171,6 +171,20 @@ angular.module('diveandcoApp')
         $window.removeEventListener('resize', reSetHeight);
       });
 
+    }
+  };
+}])
+
+.directive('searchBox', ['$log', function($log) {
+  return {
+    restrict: 'A',
+    link: function link(scope, element, attrs) {
+
+      $log.debug('searchBox: load');
+
+//       $scope.$apply(function () {
+//    $scope.tem = "templates/templateOne.html";
+// });
     }
   };
 }]);
