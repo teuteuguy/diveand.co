@@ -235,12 +235,19 @@ module.exports = function (grunt) {
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+      js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>',
           '<%= yeoman.dist %>/images',
           '<%= yeoman.dist %>/styles'
-        ]
+        ],
+        // patterns: {
+        //   js: [
+        //     [/(avatars\.svg)/, 'Replacing reference to avatars.svg'],
+        //     [/(menu\.svg)/, 'Replacing reference to menu.svg']
+        //   ]
+        // }
       }
     },
 
